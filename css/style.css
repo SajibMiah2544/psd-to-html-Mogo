@@ -1,0 +1,702 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul, ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+/* ======================
+    Common CSS End       
+========================= */
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.mid {
+    justify-content: center;
+}
+.spb{
+    justify-content: space-between;
+}
+.col-1{
+    width: 8.33%;
+    padding: 0 15px;
+}
+.col-2{
+    width: 16.66%;
+    padding: 0 15px;
+}
+.col-3{
+    width: 24.99%;
+    padding: 0 15px;
+}
+
+.col-4{
+    width: 33.33%;
+    padding: 0 15px;
+}
+.col-5{
+    width: 41.66%;
+    padding: 0 15px;
+}
+.col-8{
+    padding: 0 15px;
+    width: 66.66%; 
+}
+.col-9{
+    padding: 0 15px;
+    width: 74.99%; 
+}
+.col-10{
+    width: 80.33%;
+    padding: 0 15px;
+}
+.head{
+    text-align: center;
+}
+.head h2{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+}
+.head h3{
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Kaushan Script', cursive;
+    padding-bottom: 10px;
+    color:#333;
+}
+.head h2::after {
+    content: '';
+    position: absolute;
+    bottom: -39px;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    color:#333;
+    background: #f38181;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+/* ======================
+    Reusable CSS End       
+========================= */
+
+/* ======================
+    Header Part CSS Start       
+========================= */
+#header{
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9)), url(../images/banner-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  
+.menu{
+    display: flex;
+}
+.sticky-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgb(252, 227, 138), rgb(243, 129, 129)) ;
+    z-index: 99999;
+
+}
+.menu .logo{
+    width: 10%;
+    align-self: center;
+}
+.menu .menubar{
+    width: 90%;
+    text-align: right;
+}
+.menu .menubar ul li{
+    display: inline-block;
+}
+.menu .menubar ul li a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 14px;
+    margin-left: 56px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+.menu .menubar ul li a:hover{
+    border-bottom-color: #fce38a;
+    color: #fce38a;
+}
+.banner-area{
+    padding-top: 164px;
+    padding-bottom: 244px;
+}
+.banner-area{
+    padding-top: 164px;
+    padding-bottom: 244px;
+}
+.banner-text {
+	text-align: center;
+}
+.banner-text h2{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 72px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.banner-text h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 150px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 140px;
+    padding-top: 36px;
+    position: relative;
+    text-transform: uppercase;
+}
+.banner-text h1::after {
+    content: '';
+    position: absolute;
+    bottom: -59px;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.btn{
+    padding-top: 123px;
+} 
+.btn a {
+	padding: 12px 35px;
+    border: 3px solid #fff;
+    font-size:  14px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+#scrollToTop {
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	outline: none;
+    border: none;
+    background: linear-gradient(to top, rgb(252, 227, 138), rgb(243, 129, 129)) ;
+    cursor: pointer;
+    display: none;
+}
+#scrollToTop i {
+	font-size: 32px;
+	color:  rgb(243, 129, 129);
+	outline: none;
+	border: none;
+}
+/* ======================
+    About Part CSS Start       
+========================= */
+#about{
+    padding-top: 90px;
+    padding-bottom: 110px;
+    background: #fff;
+}
+.about-head-text p {
+	font-size: 15px;
+	color: #999;
+    padding-top: 80px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.about-item{
+    width: 370px;
+    margin-top: 100px;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    width: 103%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+.overlay .icon i{
+    color: #fff;
+}
+.overlay  h6{
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.about-item:hover .overlay{
+    opacity: 1;
+    height: 100%;
+}
+/* ======================
+    Achievement Part CSS Start       
+========================= */
+#achievement{
+    padding: 90px 0;
+    background: #95e1d3;
+}
+.achievment-item{
+    width: 20%;
+    text-align: center;
+}
+.achievment-item h2{
+    font-size: 72px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.achievment-item p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    padding-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+
+}
+/* ======================
+    Service Part CSS Start       
+========================= */
+#service{
+    padding-top: 110px ;
+    padding-bottom: 100px;
+}
+.service-main{
+    width: 370px;
+    padding-top: 110px;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.service-icon{
+    width: 70px;
+    text-align: center;
+    line-height: 24px;
+}
+.service-icon i{
+    color: #999;
+    font-size: 15px;
+}
+.service-text{
+    width: 300px;
+}
+.service-text h5{
+    color: #333333;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.service-text p{
+    color: #999999;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    padding-top: 15px;
+}
+/* ======================
+    Qouta Part CSS Start       
+========================= */
+#qouta{
+    background: #f8f8f8;
+    padding: 70px 0;
+}
+.btn-left{
+    padding-top: 60px;
+}
+.btn-right{
+    padding-top: 60px;
+    text-align: right;
+}
+#qouta button {
+	border: none;
+	background: transparent;
+}
+.qouta-fram {
+	border: 3px solid #95e1d3;
+	padding: 42px;
+	text-align: center;
+}
+.qouta-content p{
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-size: 24px;
+    color: #999999;
+}
+.qouta-content h4{
+    font-weight: 400;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #333333;
+    padding-left: 72px;
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+.qouta-content h4::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	width: 60px;
+	height: 3px;
+	background: #f38181;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+}
+/* ======================
+    Team Part CSS Start       
+========================= */
+#team{
+    padding: 100px 0;
+}
+.team-main{
+    text-align: center;
+    padding-top: 90px;
+}
+.team-member{
+    position: relative;
+}
+.team-member img{
+    width: 100%;
+}
+.team-member .over{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9));
+    opacity: 0;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+.team-member .over a{
+    width: 55px;
+    height: 55px;
+    background: red;
+    display: inline-block;
+    line-height: 55px;
+    color: #f38181;
+    background: #fce38a;
+}
+
+.team-member:hover .over{
+    opacity: 1;
+    height: 100%;
+}
+.team-member .over a:hover{
+    background: #f38181;
+    color: #fff;
+}
+.team-main .member-intro h4{
+    font-size: 14px;
+    color: #333333;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding-top: 25px;
+
+}
+.team-main .member-intro p{
+    font-size: 15px;
+    color: #999999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+}
+/* ======================
+    Our Work Part CSS Start       
+========================= */
+#work{
+    padding: 100px 0;
+    background: #fff;
+}
+.work-item{
+    width: 25%;
+    padding-top: 100px;
+    overflow: hidden;
+}
+.item{
+    position: relative;
+}
+.item img{
+    width: 100%;
+    margin-bottom: -4px;
+}
+.item .over{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.9), rgba(243, 129, 129, 0.9));
+    opacity: 0;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    flex-direction: column;
+
+}
+.item .over .icon i{
+    color: #fff;
+}
+.item .over h5{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    padding:  15px 0;
+
+}
+.item .over p{
+    font-size: 15px;
+    color: #fff;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+
+}
+.item:hover .over{
+    opacity: 1;
+    height: 100%;
+}
+/* ======================
+    Footer Part CSS Start       
+========================= */
+#footer{
+padding-bottom: 67px;
+padding-top: 80px;
+background: #f8f8f8;
+border-bottom: 1px solid #e5e5e5;
+}
+.footer-right p{
+    font-size: 15px;
+    color: #999999;
+    font-family: 'Roboto', sans-serif;
+    line-height: 24px;
+    font-weight: 400;
+    padding-top: 32px;
+
+}
+.footer-right h6{
+    font-size: 14px;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding-top: 50px;
+    position: relative;
+    padding-bottom: 39px;
+}
+.footer-right h6::after{
+    content: '';
+    width: 100%;
+    background: #e5e5e5;
+    height: 1px;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+.footer-right h6 span{
+    font-size: 18px;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+}
+.footer-right .socail-links{
+    padding-top: 39px;
+    padding-bottom: 15px;
+}
+.footer-right .socail-links span{
+    font-size: 15px;
+    color: #999999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+.footer-right .socail-links a{
+    color: #95e1d3;
+    margin-left: 15px;
+}
+.footer-right #email{
+    padding: 11px 100px 11px 10px;
+    border: 1px solid #ddd;
+    border-right: none;
+}
+.footer-right #email::placeholder{
+    font-size: 15px;
+    color: #cccccc;
+    font-style: italic;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+.footer-right button {
+	padding: 0 35px;
+	display: inline-block;
+	background: #95e1d3;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	margin-left: -4px;
+	border: none;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.footer-mid h4{
+    font-size: 14px;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 34px;
+}
+.footer-mid-content{
+    display: flex;
+    padding-bottom: 27px;
+}
+.footer-mid .blog-content{
+    padding-left: 20px;
+}
+.footer-mid .blog-content p{
+    font-size: 12px;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 18px;
+}
+.footer-mid .blog-content span{
+    font-size: 13px;
+    color: #999999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+.footer-left h4{
+    font-size: 14px;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 34px;
+}
+.footer-left-gellary{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-gellary-item {
+	width: 33.33%;
+	margin-right: -2px;
+	margin-bottom: -4px;
+}
+.view-btn{
+    padding-top: 20px;
+}
+
+.view-btn a{
+    font-size: 13px;
+    color: #333333;
+    font-style: italic;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    
+}
+/* ======================
+    Copyright Part CSS Start       
+========================= */
+#copyright{
+    background: #f8f8f8;
+}
+.copyright{
+    text-align: center;
+}
+.copyright p{
+    line-height: 60px;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+.copyright p span{
+    line-height: 60px;
+    font-size: 14px;
+    color: #f38181;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+/* ======================
+    Header Part CSS Start       
+========================= */
+/* ======================
+    Header Part CSS Start       
+========================= */
+/* ======================
+    Header Part CSS Start       
+========================= */
+   
